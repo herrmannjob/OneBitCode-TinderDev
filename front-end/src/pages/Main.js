@@ -29,7 +29,7 @@ export default function Main({ match }) {
             headers: { user: match.params.id },
         });
 
-        setUsers(users.filter(user => user._id != id));
+        setUsers(users.filter(user => user._id !== id));
     }
 
     async function handleDislike(id) {
@@ -38,10 +38,10 @@ export default function Main({ match }) {
             headers: { user: match.params.id },
         });
 
-        setUsers(users.filter(user => user._id != id));
+        setUsers(users.filter(user => user._id !== id));
     }
 
-    if (users.length == 0) {
+    if (users.length === 0) {
         debugger
         return (
             <div className="empty">Suas opções acabaram.</div>
